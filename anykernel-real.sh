@@ -7,7 +7,7 @@ properties() { '
 kernel.string=ExampleKernel by osm0sis @ xda-developers
 kernel.for=KernelForDriver
 kernel.compiler=SDPG
-kernel.made=Kunmun @ElectroPerf
+kernel.made=Bounty Hunter
 kernel.version=4.4.xxx
 message.word=ooflol
 build.date=2077
