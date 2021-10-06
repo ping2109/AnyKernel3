@@ -274,7 +274,6 @@ do_devicecheck() {
   for testname in $(file_getprop anykernel.sh 'device.name.*'); do
     for devicename in $device $product $vendordevice $vendorproduct; do
       if [ "$devicename" == "$testname" ]; then
-        ui_print "- OK ! ";
         match=1;
         break 2;
       fi;
@@ -316,7 +315,6 @@ do_versioncheck() {
   fi;
   ui_print "- Android Version: $android_ver ";
   if [ "$supported" ]; then
-	ui_print "- OK !";
   else
     abort "x Unsupported Android version, this fernel is only for Android $supported_ver. Aborting!";
   fi;
@@ -531,18 +529,6 @@ BUILD_DATE="$(file_getprop anykernel.sh build.date)";
 MESSAGE_WORD="$(file_getprop anykernel.sh message.word)";
 DEVICE_NAME="$(file_getprop anykernel.sh device.name3)";
 ui_print "**************************";
-ui_print " _   _                      ";
-ui_print "| \ | |                     ";
-ui_print "|  \| | _   ____ _      ";
-ui_print "| .  |/ _ \ \ / / _ |     ";
-ui_print "| |\  |  /\ V / (_| |     ";
-ui_print "|_| \_|\_| \_/ \__,_|   _ ";
-ui_print "| |/ /                   | |";
-ui_print "| ' / _ _  _    _| |";
-ui_print "|  < / _ \ '__| '_ \ / _ \ |";
-ui_print "| . \  / |  | | | |  / |";
-ui_print "|_|\_\___|_|  |_| |_|\___|_|";
-ui_print "**************************";
 ui_print " Name        : $KERNEL_STRING";
 ui_print " SELinux     : $KERNEL_VERSION";
 ui_print " Variant     : $KERNEL_FOR";
@@ -583,6 +569,7 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
 fi;
 
 ui_print "x Done";
+ui_print " ";
 ui_print "**************************";
-ui_print " " "$MESSAGE_WORD" " ";
+ui_print "$MESSAGE_WORD";
 ui_print "**************************";
