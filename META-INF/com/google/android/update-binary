@@ -313,10 +313,10 @@ do_versioncheck() {
       fi;
     done;
   fi;
-  ui_print "- Android Version: $android_ver ";
+  ui_print "x Android Version: $android_ver";
   if [ "$supported" ]; then
   else
-    abort "x Unsupported Android version, this fernel is only for Android $supported_ver. Aborting!";
+    abort "x Unsupported Android version, this fernel is only for Android $supported_ver. Aborting";
   fi;
 }
 do_levelcheck() {
