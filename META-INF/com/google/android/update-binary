@@ -518,7 +518,6 @@ fi;
 
 if [ -f banner ]; then
   ui_printfile banner;
-  ui_print " ";
 fi;
 
 KERNEL_STRING="$(file_getprop anykernel.sh kernel.string)";
@@ -573,3 +572,4 @@ ui_print " ";
 ui_print "*****************************";
 ui_print "$MESSAGE_WORD";
 ui_print "*****************************";
+ui_print " ";
