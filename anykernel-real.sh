@@ -4,24 +4,24 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=ExampleKernel by osm0sis @ xda-developers
-kernel.for=KernelForDriver
-kernel.compiler=SDPG
-kernel.made=Bounty Hunter
-kernel.version=4.4.xxx
+kernel.string=NevaKernel by ping2109official@TG
+kernel.for=your mom
+kernel.compiler=GitHub Actions
+kernel.made=
+kernel.version=4.9.x
 message.word=Enjoy
-build.date=2077
+build.date=2021
 do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=X01BD
-device.name2=X01BDA
-device.name3=Zenfone Max Pro M2 (X01BD)
-device.name4=ASUS_X01BD
-device.name5=ASUS_X01BDA
-supported.versions=10.0-11.0
+device.name1=riva
+device.name2=rolex
+device.name3=Xiaomi Redmi 5A
+device.name4=
+device.name5=
+supported.versions=10-12
 supported.patchlevels=
 '; } # end properties
 
