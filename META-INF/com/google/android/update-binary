@@ -450,34 +450,34 @@ AddSpectrum(){
     grep "import /init.spectrum.rc" /vendor/etc/init/hw/init.qcom.rc >/dev/null | sed -i '/import \/init.spectrum.rc/d' /vendor/etc/init/hw/init.qcom.rc
     grep "import init.spectrum.rc" /vendor/etc/init/hw/init.qcom.rc >/dev/null | sed -i '/import init.spectrum.rc/d' /vendor/etc/init/hw/init.qcom.rc
     grep "import /vendor/etc/init/hw/init.spectrum.rc" /vendor/etc/init/hw/init.qcom.rc >/dev/null || sed -i '1,/.*import.*/s/.*import.*/import \/vendor\/etc\/init\/hw\/init.spectrum.rc\n&/' /vendor/etc/init/hw/init.qcom.rc
-    ui_print "- Patching Spectrum Script...";
+    ui_print "x Patching Spectrum script";
 	cp -af $AKHOME/init.spectrum.rc /vendor/etc/init/hw/
     chmod -R 644 /vendor/etc/init/hw/init.spectrum.rc
     # cprofile remover
     if [ -e /system/xbin/cprofile ];then
       rm -rf /system/xbin/cprofile
-      ui_print "remove /system/xbin/cprofile"
+      ui_print "x Remove /system/xbin/cprofile"
     fi
     if [ -e /system/bin/cprofile ];then
       rm -rf /system/bin/cprofile
-      ui_print "remove /system/bin/cprofile"
+      ui_print "x Remove /system/bin/cprofile"
     fi
     if [ -e /vendor/bin/cprofile ];then
       rm -rf /vendor/bin/cprofile
-      ui_print "remove /vendor/bin/cprofile"
+      ui_print "x Remove /vendor/bin/cprofile"
     fi
     if [ -e /system/init.spectrum.rc ];then
       rm -rf /system/init.spectrum.rc
-      ui_print "remove /system/init.spectrum.rc"
+      ui_print "x Remove /system/init.spectrum.rc"
     fi
     if [ -e /system/init.spectrum.sh ];then
       rm -rf /system/init.spectrum.sh
-      ui_print "remove /system/init.spectrum.sh"
+      ui_print "x Remove /system/init.spectrum.sh"
     fi
   else
     if [ -e /vendor/etc/init/hw/init.spectrum.rc ];then
       rm -rf /vendor/etc/init/hw/init.spectrum.rc
-	  ui_print "- Removing old Spectrum Script..."
+	  ui_print "x Removing old Spectrum script"
     fi
     if [ -e /vendor/etc/init/hw/init.qcom.rc.backup ];then
       cp -af /vendor/etc/init/hw/init.qcom.rc.backup /vendor/etc/init/hw/init.qcom.rc
@@ -496,7 +496,7 @@ mkdir -p $AKHOME/bin;
 cd $AKHOME;
 unzip -o "$ZIPFILE";
 if [ $? != 0 -o ! "$(ls tools)" ]; then
-  abort "Unzip failed. Aborting...";
+  abort "x Unzip failed. Aborting";
 fi;
 for ARCH32 in x86 arm; do
   if [ -d $AKHOME/tools/$ARCH32 ]; then
@@ -548,8 +548,8 @@ ui_print " SELinux     : $KERNEL_VERSION";
 ui_print " Variant     : $KERNEL_FOR";
 ui_print " Compiler    : $KERNEL_COMPILER";
 ui_print " Device      : $DEVICE_NAME";
-ui_print " Build date   : $BUILD_DATE";
-ui_print " Built by     : $KERNEL_MADE";
+ui_print " Build date  : $BUILD_DATE";
+ui_print " Built by    : $KERNEL_MADE";
 ui_print "**************************";
 if [ -f version ]; then
   ui_print " ";
