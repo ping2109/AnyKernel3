@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=NevaKernel by ping2109official@TG
+kernel.string=NevaCore by ping2109official@TG
 kernel.for=your mom
 kernel.compiler=GitHub Actions
 kernel.made=
