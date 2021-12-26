@@ -4,11 +4,11 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=NevaCore by ping2109official@TG
+kernel.string=NevaCore by pingmado@TG
 kernel.for=your mom
 kernel.compiler=GitHub Actions
 kernel.made=
-kernel.version=4.4.x
+kernel.version=4.9.x
 message.word=Enjoy the #NevaPower
 build.date=2021
 do.devicecheck=1
@@ -16,12 +16,12 @@ do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=lavender
-device.name2=Xiaomi Redmi Note 7
-device.name3=Xiaomi Redmi Note 7S
+device.name1=beryllium
+device.name2=
+device.name3=
 device.name4=
 device.name5=
-supported.versions=10-12
+supported.versions=12
 supported.patchlevels=
 '; } # end properties
 
